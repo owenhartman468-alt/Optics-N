@@ -416,12 +416,12 @@
                             <div class="row g-3">
                                 <div class="col-sm-6">
                                     <label class="form-label">Your Name</label>
-                                    <input type="text" class="form-control" name="quote[full_name]"
+                                    <input type="text" class="form-control" name="quote[name]"
                                         placeholder="e.g. Ali Hassan" />
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" name="quote[phone_number]"
+                                    <input type="number" class="form-control" name="quote[number]"
                                         placeholder="03XX-XXXXXXX" />
                                 </div>
                                 <div class="col-sm-6">
@@ -438,7 +438,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label">Preferred Date</label>
-                                    <input type="date" class="form-control" name="quote[preferred_date]" required />
+                                    <input type="date" class="form-control" name="quote[date]" required />
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Your Address</label>
@@ -451,7 +451,7 @@
                                         placeholder="Any special requirements or concerns…"></textarea>
                                 </div>
                                 <div class="col-12 mt-2">
-                                    <button class="btn-submit" onclick="handleSubmit(event)">
+                                    <button type="submit" class="btn-submit">
                                         <i class="bi bi-calendar-check me-2"></i>Confirm My Appointment
                                     </button>
                                 </div>
