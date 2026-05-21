@@ -12,7 +12,7 @@ require 'PHPMailer/SMTP.php';
 
 if ((isset($_POST['inquiry'])) || (isset($_POST['quote']))) {
     $data = (isset($_POST['inquiry'])) ? $_POST['inquiry'] : $_POST['quote'];
-    $to = "owenhartman468@gmail.com";
+    $to = "demouser@yopmail.com";
     $subject = (isset($_POST['inquiry'])) ? "Inquiry - Form Alert" : "Inquiry - Form";
 
     $inputs = '';
@@ -43,13 +43,13 @@ if ((isset($_POST['inquiry'])) || (isset($_POST['quote']))) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'owenhartman468@gmail.com';
+        $mail->Username   = 'demouser@yopmail.com';
         $mail->Password   = 'vrsz tzni cafo dkbq';     // App Password daalo
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('owenhartman468@gmail.com', 'Palm Beach Executive Limo');
-        $mail->addAddress('owenhartman468@gmail.com');     
+        $mail->setFrom('demouser@yopmail.com', 'Palm Beach Executive Limo');
+        $mail->addAddress('demouser@yopmail.com');     
         // $mail->addAddress('html.demo400@gmail.com');       
 
         $mail->isHTML(true);
