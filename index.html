@@ -412,8 +412,7 @@
 
                     <!-- Appointment Form -->
                     <div class="col-lg-7">
-                        <form action="https://formsubmit.co/owenhartman468@gmail.com" method="POST"
-                            class="form-get-quote">
+                        <form action="https://formsubmit.co/owenhartman468@gmail.com" method="POST" target="_blank">
 
 
                             <div class="row g-3">
@@ -546,45 +545,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/custom.js"></script>
 
-
-    <script>
-        $('.form-get-quote').on('submit', function (e) {
-            var obj = $(this);
-            e.preventDefault();
-
-            // Prevent multiple hidden inputs being added on every submit
-            obj.find('input[name="quote[lead_url]"]').remove();
-
-            $("<input>", {
-                type: "hidden",
-                name: "quote[lead_url]",
-                value: window.location.href
-            }).appendTo(obj);
-
-            var data = obj.serialize();
-
-            jQuery.ajax({
-                url: "sendmail.php",
-                type: "POST",
-                data: data,
-                async: false,
-                dataType: "json",
-                success: function (response) {
-                    if (response.status == 1) {
-                        window.location = 'thankyou.html';
-                        obj.trigger("reset");
-                    } else {
-                        return false;
-                    }
-                },
-                beforeSend: function () {
-                    // Loader.show();
-                }
-            });
-
-            return false;
-        });
-    </script>
 </body>
 
 </html>
